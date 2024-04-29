@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="ie lt-ie9 lt-ie8 lt-ie7 no-touch-support"> <![endif]-->
+<!--[if IE 7]>         <html class="ie lt-ie9 lt-ie8 ie7 no-touch-support"> <![endif]-->
+<!--[if IE 8]>         <html class="ie lt-ie9 ie8 no-touch-support"> <![endif]-->
+<!--[if IE 9]>         <html class="ie ie9 no-touch-support"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+<html class="no-touch-support" lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>The How Much Could You Save Calculator - SunLife</title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!--[if gt IE 8]><!--> 
+        <link rel="stylesheet" media="screen" type="text/css" href="source/css/init.css" />
+        <style type="text/css">
+        .savings-calc,.savings-calc *,.savings-calc :after,.savings-calc :before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body.savings-calc{background:#009fe3;font:16px VAG Rounded W01 Light,Arial,Helvetica,sans-serif;color:#fff;text-align:center}.savings-calc .cont{max-width:960px;width:100%;margin:0 auto;padding:15px}.savings-calc header{background:#fd0}.savings-calc .quote-component{width:290px;-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}.savings-calc .quote-component .text-line,.savings-calc .quote-component q .icon-quote-close,.savings-calc .quote-component q .icon-quote-open,.savings-calc .quote-component span{text-shadow:none;color:#009fe3}.savings-calc .quote-component .text-line.text-line-close,.savings-calc .quote-component .text-line.text-line-open{margin:0;font-size:2rem}.savings-calc .quote-component .text-line.text-line-open{margin-bottom:5px;text-align:left}.savings-calc .quote-component .text-line.text-line-close{margin-top:5px;text-align:right}.savings-calc .quote-component p{text-align:left}.savings-calc .quote-component q{font-size:4.5rem}.savings-calc .quote-component q span{line-height:3.7rem;color:#d40063;letter-spacing:-.07em}.savings-calc .intro{background:#00354c;padding:15px;border-radius:5px;line-height:1.5;margin:10px 0 30px}.savings-calc .inputs{width:100%}.savings-calc .inputs li{width:100%;margin-bottom:20px}.savings-calc .inputs li:hover .icon{box-shadow:0 0 20px rgba(0,0,0,.25)}.savings-calc .icon{width:164px;height:164px;border-radius:50%;margin:0 auto;background:url(source/images/circles.png);-webkit-transition:.2s;transition:.2s}.savings-calc .cigarettes .icon{background-position:0 -164px}.savings-calc .beers .icon{background-position:0 -328px}.savings-calc .chocolate .icon{background-position:0 -492px}.savings-calc .coffee .icon{background-position:0 -656px}.savings-calc .takeaways .icon{background-position:0 -820px}.savings-calc .spirits .icon{background-position:0 -984px}.savings-calc .sandwiches .icon{background-position:0 -1148px}.savings-calc .bus-trips .icon{background-position:0 -1312px}.savings-calc li input{border-radius:5px;padding:6px 0 4px;width:95px;text-align:center;border:none;box-shadow:0 0 10px rgba(0,0,0,.2);font-size:1.7em;font-weight:700;line-height:1.2;color:#777;display:block;margin:-20px auto 0}.savings-calc li p{color:#175772;font-weight:700;margin-top:10px}li p span{display:block;font-weight:400;font-size:.9em}.savings-calc .cta-calculate{background:#f3cf02;padding:20px 20px 20px 85px;border-radius:10px;font-size:1.4em;color:#d40063;max-width:515px;margin:30px auto 50px;position:relative;box-shadow:0 5px 0 rgba(0,0,0,.15);cursor:pointer;border:none;font-family:inherit}.savings-calc .cta-calculate:before{content:"";position:absolute;left:-10px;top:-10px;width:90px;height:90px;background:url(source/images/calculator.png) center/45% no-repeat #d40063;border-radius:50%}.savings-calc .results{background:#d40063;display:none}.savings-calc .results-head{background:#fd0;padding:10px 0}.savings-calc .results-head h4{font-size:2.8em;text-shadow:2px 2px 0 rgba(0,0,0,.1);color:#fff}.savings-calc .results-body{padding:40px 0;font-size:2em}.savings-calc .results-body p{margin-bottom:20px;padding:0 20px}.savings-calc .results-body span{display:inline-block}.savings-calc .pound{width:50px;height:50px;background:#f3cf02;padding:5px;border-radius:50%;text-shadow:1px 1px 0 rgba(0,0,0,.1);text-align:center}.savings-calc .num{color:#f3cf02}.savings-calc .type{font-size:.7em;color:#84003e}.savings-calc .ten-yr{font-size:1.3em;margin-top:40px}.savings-calc .ten-yr .pound{width:80px;height:80px;padding:12px;position:relative;z-index:2;background:#00354c}.savings-calc .ten-yr .num{background:#fff;padding:4px 40px 4px 60px;margin-left:-50px;position:relative;z-index:1;color:#009fe3;border-radius:10px;box-shadow:0 5px 0 rgba(0,0,0,.15)}.savings-calc .ten-yr .type{margin:-2px;font-size:.5em;display:block;padding-left:50px}.savings-calc .social-head{width:100%;text-align:center;color:#fff;font-size:.5em;margin:30px 0 20px;float:left;background:rgba(0,0,0,.1);padding:10px}.savings-calc footer{background:#960046;font:.7em/1.5 Arial,Helvetica,sans-serif;padding:15px 0}.savings-calc footer p{color:#f58abc;width:100%;max-width:700px;margin:0 auto 15px}.savings-calc .page-content footer a{color:#ef2584;border-bottom:1px dotted #ef2584;text-decoration:none}.savings-calc footer a:hover{color:#ef2584;border-bottom:1px solid #ef2584}.savings-calc .how-toggle{background:#82003d;padding:10px 0;color:#f58abc;cursor:pointer;margin-bottom:10px;font-size:1.2em}.savings-calc .how-toggle:hover{background:#790139}.savings-calc .how{display:none}@media (min-width:410px){.savings-calc .inputs li{width:50%;float:left}.savings-calc .inputs li:nth-child(9){margin-left:25%}}@media (min-width:620px){.savings-calc .quote-component{width:455px}.savings-calc .quote-component .text-line.text-line-close,.savings-calc .quote-component .text-line.text-line-open{font-size:3rem}.savings-calc .quote-component q{font-size:7rem}.savings-calc .quote-component q span{line-height:5.4rem}.savings-calc .inputs li{width:33.3%;float:left}.savings-calc .inputs li:nth-child(9){margin-left:0}.savings-calc .cta-calculate{padding:20px 60px 20px 140px;font-size:2em;margin:50px auto 80px}.savings-calc .cta-calculate:focus,.savings-calc .cta-calculate:hover{background:#ecc902}.savings-calc .cta-calculate:focus:before,.savings-calc .cta-calculate:hover:before{background-color:#c5015c}.savings-calc .cta-calculate:before{left:-30px;top:-26px;width:129px;height:129px;background-size:auto}.savings-calc .results-body{font-size:2.3em}.savings-calc .pound{width:60px;height:60px;padding:7px}.savings-calc .ten-yr .pound{width:90px;height:90px;padding:15px}}@media (min-width:768px){.savings-calc .intro{padding:20px 140px;font-size:1.2em;margin:20px 0 30px}.savings-calc .results-head{padding:30px 0}}@media (min-width:960px){.savings-calc .intro{margin:20px 0 40px}.savings-calc .inputs li{width:20%;float:left}.savings-calc .inputs li:nth-child(6){margin-left:10%}.savings-calc .results-body{overflow:hidden;font-size:3em}.savings-calc .results-body p{width:33%;float:left}.savings-calc .results-body .type{display:block;font-size:.4em;padding-left:130px;text-align:left}.savings-calc .results-body .ten-yr{width:100%}.savings-calc .results-body .ten-yr .type{padding-left:50px;text-align:center}.savings-calc .pound{width:80px;height:80px;padding:12px}.savings-calc .ten-yr .pound{width:115px;height:115px;padding:22px}}@media (min-width:1010px){.savings-calc .cont{padding-left:0;padding-right:0}.savings-calc .ten-yr{font-size:1.7em}.savings-calc .ten-yr .pound{width:155px;height:155px;padding:27px}.savings-calc .ten-yr .num{padding:4px 90px 4px 100px;margin-left:-55px}}
+        </style>
+        <!--<![endif]-->
+
+        <!--[if (lt IE 9) & (!IEMobile)]>
+        <link rel="stylesheet" media="screen" href="source/css/ie7-8.css">
+        <script src="source/js/libs/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- 3rd Party Meta -->
+        <meta name="twitter:site" value="SunLife">
+        <meta property="og:site_name" content="SunLife"/>
+        <meta property="og:title" content="SunLife - The How Much Could You Save Calculator" />
+        <meta property="og:image" content="source/images/facebook-share-img.png" />
+        <meta property="og:description" content="Text to go in Facebook share message" />
+
+
+        <script type="text/javascript">
+        // Web font usage: tracking script required for go live...
+        var MTIProjectId='f890c8ac-2afe-4531-a027-6e2676f7fda6';
+         (function() {
+                var mtiTracking = document.createElement('script');
+                mtiTracking.type='text/javascript';
+                mtiTracking.async='true';
+                mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.net/t/trackingCode.js';
+                (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+           })();
+        </script>
+        <script>
+            /* set the html tag to have a javascript class to hide all the dynamic stuff */
+            document.getElementsByTagName("html")[0].className += " js";
+
+            /* workaround to get viewport size working on windows8 mobile */
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(
+                    document.createTextNode(
+                        "@-ms-viewport{width:auto!important}"
+                    )
+                );
+                document.getElementsByTagName("head")[0].
+                    appendChild(msViewportStyle);
+            }
+        </script>
+
+
+    </head>
+    <body class="savings-calc">
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=194500557289809&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NNQ67Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NNQ67Q');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+        <div class="wrapper" id="pageTop">
+
+            <div class="page">
+
+                <div class="cookie-panel" style="display: none;">
+                    <div class="container">
+                        <!--googleoff: index-->
+                        <div class="content">
+                            <p>We use cookies to give you the best possible online experience. If you continue, we'll assume you are happy for your web browser to receive all cookies from our website. See our <a href="#">cookie policy</a> for more information on cookies and how to manage them.</p>
+                        </div>
+                        <!--googleon: index-->
+                        <div class="btn-container"><a href="#" class="btn">Close</a></div>
+                    </div>
+                </div>
+                
+
+                <header role="banner">
+                    <div class="cont">
+                        <div class="quote-component">
+                            <p>
+                                <span class="text-line text-line-open">The</span>
+                                <q>
+                                    <span class="icon-quote-open"></span>
+                                    <span>How much could you save</span>
+                                    <span class="icon-quote-close"></span>
+                                </q>
+                                <span class="text-line text-line-close">Calculator</span>
+                            </p>
+                        </div>
+                    </div>
+                </header>
+
+
+                <div class="page-content" id="pageContent" role="main">    
+
+                    <script type="text/javascript">
+                        var stayOnPageAlert = true;
+                    </script>
+
+
+                    <div class="main">
+                        <div class="cont">
+
+                            <div class="intro">
+                                <p>Just tell us a bit more about your weekly spending habits and we will calculate how much you could save in 10 years&hellip;</p>
+                            </div>
+
+                            <form>
+
+                                <ul class="inputs">
+                                    <li class="wine">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>glasses of wine <span>per week</span></p>
+                                    </li>
+
+                                    <li class="cigarettes">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>packs of cigarettes <span>per week</span></p>
+                                    </li>
+
+                                    <li class="beers">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>beers <span>per week</span></p>
+                                    </li>
+
+                                    <li class="chocolate">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>chocolate bars <span>per week</span></p>
+                                    </li>
+
+                                    <li class="coffee">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>takeaway coffees <span>per week</span></p>
+                                    </li>
+
+                                    <li class="takeaways">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>takeaway meals <span>per week</span></p>
+                                    </li>
+
+                                    <li class="spirits">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>spirits &amp; mixers <span>per week</span></p>
+                                    </li>
+
+                                    <li class="sandwiches">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>takeaway sandwiches <span>per week</span></p>
+                                    </li>
+
+                                    <li class="bus-trips">
+                                        <div class="icon"></div>
+                                        <input type="number" placeholder="0">
+                                        <p>bus trips <span>per week</span></p>
+                                    </li>
+                                </ul>
+
+                                <button class="cta-calculate">Calculate your savings</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+
+                    <div class="results">
+                        <div class="results-head">
+                            <div class="cont">
+                                <h4>Here's what you could save&hellip;</h4>
+                            </div>
+                        </div>
+
+                        <div class="cont results-body">
+
+                            <p class="weekly">
+                                <span class="pound">&pound;</span>
+                                <span class="num">0</span>
+                                <span class="type">every week</span>
+                            </p>
+
+                            <p class="monthly">
+                                <span class="pound">&pound;</span>
+                                <span class="num">0</span>
+                                <span class="type">every month</span>
+                            </p>
+
+                            <p class="yearly">
+                                <span class="pound">&pound;</span>
+                                <span class="num">0</span>
+                                <span class="type">every year</span>
+                            </p>
+
+                            <p class="ten-yr">
+                                <span class="pound">&pound;</span>
+                                <span class="num">0</span>
+                                <span class="type">in 10 years</span>
+                            </p>
+
+                            <h5 class="social-head">Tell your friends&hellip;</h5>
+
+                            <div class="social">
+                                <a class="twitter-share-button" data-text="Text to go in Twitter share message" data-count="vertical" href="https://twitter.com/share">Tweet</a>
+                                <script type="text/javascript">
+                                window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+                                </script>
+
+                                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <footer>
+                        <div class="cont">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel feugiat lacus, vitae scelerisque eros. Curabitur sit amet massa eros. Fusce tincidunt bibendum molestie. Donec ut arcu sit amet libero convallis tincidunt non eget dolor. Quisque non ante nunc. Phasellus laoreet orci sed adipiscing vehicula. Phasellus volutpat sapien eleifend, fringilla sem dapibus, ultricies sapien. Nunc vestibulum porttitor nunc ac sodales.</p>
+                        </div>
+                        <h5 class="how-toggle">How are these figures calculated?</h5>
+                        <div class="how">
+                            <p>The savings figures are based on the average cost per unit of each item, which are as follows;</p>
+
+                            <p>Glass of wine: &pound;3.00 <br>(<a href="http://www.nhs.uk/change4life/Pages/understanding-alcohol.aspx">http://www.nhs.uk/change4life/Pages/understanding-alcohol.aspx</a>)</p>
+
+                            <p>Pack of 20 cigarettes: &pound;7.98 - <br>(<a href="http://www.the-tma.org.uk/tma-publications-research/facts-figures/uk-cigarette-prices/">http://www.the-tma.org.uk/tma-publications-research/facts-figures/uk-cigarette-prices/</a>)</p>
+
+                            <p>Pint of beer: &pound;3.20 <br>(<a href="http://www.dailymail.co.uk/news/article-2605281/Britains-1-pub-opens-doors-theres-catch-pint-costs-1-50.html">http://www.dailymail.co.uk/news/article-2605281/Britains-1-pub-opens-doors-theres-catch-pint-costs-1-50.html</a>)</p>
+
+                            <p>Bar of chocolate: 51p <br>(<a href="http://www.dailymail.co.uk/news/article-2524032/Mars-Snickers-chocolate-bars-shrink-size-price-stays-same.html">http://www.dailymail.co.uk/news/article-2524032/Mars-Snickers-chocolate-bars-shrink-size-price-stays-same.html</a>)</p>
+
+                            <p>Takeaway coffee: &pound;2.20 <br>(<a href="http://www.expressvending.co.uk/blog/real-price-takeout-coffee/">http://www.expressvending.co.uk/blog/real-price-takeout-coffee/</a>)</p>
+
+                            <p>Takeaway meal: &pound;9.16 <br>(<a href="http://www.dailymail.co.uk/news/article-2303861/Takeaway-UK-Average-Brit-spending-1-320-year-fastfood-buying-12-meals-month.html">http://www.dailymail.co.uk/news/article-2303861/Takeaway-UK-Average-Brit-spending-1-320-year-fastfood-buying-12-meals-month.html</a>)</p>
+
+                            <p>Spirits &amp; mixers: &pound;2.50 <br>(<a href="http://www.nhs.uk/change4life/Pages/understanding-alcohol.aspx">http://www.nhs.uk/change4life/Pages/understanding-alcohol.aspx</a>)</p>
+
+                            <p>Takeaway sandwich: &pound;1.66 <br>(<a href="http://www.sandwichnews.com/sandwich-facts-and-trivia">http://www.sandwichnews.com/sandwich-facts-and-trivia</a>)</p>
+
+                            <p>Bus ride: &pound;1.91 <br>(<a href="http://www.tas.uk.net/content/index.php/news/87-new-bus-fare-survey-shows-rises-below-inflation-despite-fuel-cost-explosion">http://www.tas.uk.net/content/index.php/news/87-new-bus-fare-survey-shows-rises-below-inflation-despite-fuel-cost-explosion</a>)</p>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="popup-window" tabindex="-1" role="dialog" aria-labelledby="popup window">
+            <a href="#" class="close"><span class="close-btn"></span></a>
+            <div class="popup-window-content-holder"></div>
+        </div>
+        <div class="modal"></div>
+
+
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">window.jQuery || document.write('<script src="source/js/libs/jquery-1.10.2.min.js">\x3C/script>')</script>
+        <script src="/min/bundle.min.js"></script>
+<!-- <script type="text/javascript" src="source/js/libs/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="source/js/libs/jquery.ui.touch-punch.min.js"></script>
+<script src="source/js/libs/WebUIValidation.js"></script>
+<script src="source/js/eqtr/commons/jquery.placeholder.js"></script>
+<script src="source/js/libs/jquery.smartresize.js"></script>
+<script src="source/js/libs/jquery.imagesLoaded.js"></script>
+<script src="source/js/eqtr/commons/helpers.js"></script>
+<script src="source/js/eqtr/commons/jquery.responsiveImages.js"></script>
+<script src="source/js/eqtr/commons/jquery.backgroundcover.js"></script>
+<script src="source/js/eqtr/commons/jquery.valign.js"></script>
+<script src="source/js/eqtr/commons/jquery.showHide.js"></script>
+<script src="source/js/eqtr/commons/jquery.popup.js"></script>
+<script src="source/js/eqtr/commons/jquery.equalHeights.js"></script>
+<script src="source/js/eqtr/commons/jquery.videoPlayer.js"></script>
+<script src="source/js/eqtr/commons/jquery.responsiveTable.js"></script>
+<script src="source/js/eqtr/app.js"></script>
+<script src="source/js/eqtr/components/forms.components.js"></script>
+<script src="source/js/sld/app.js"></script>
+<script src="source/js/app.init.js"></script> 
+
+        <script type="text/javascript">
+        // override the ValidatorUpdateDisplay. Keeps the original while allowing custom code to be inserted before or after the original function call
+        var ValidatorUpdateDisplay = (function() {
+	        var _ValidatorUpdateDisplay = ValidatorUpdateDisplay,
+		        debounceTimer;
+
+	        return function(val) {
+		        _ValidatorUpdateDisplay(val);
+		
+		        clearTimeout(debounceTimer);
+
+		        debounceTimer = setTimeout(function() {
+		            APP.EQTR.FORMS.validationUpdate(val);
+		        },1);
+	        }
+
+        })();
+        </script>--> 
+
+
+
+        <script type="text/javascript">
+
+            // jQuery scroll-to plugin
+            !function(o,e,t){"undefined"!=typeof module&&module.exports?module.exports=t():"function"==typeof define&&define.amd?define(t):e[o]=t()}("jquery-scrollto",this,function(){var o,e,t;return o=e=window.jQuery||require("jquery"),e.propHooks.scrollTop=e.propHooks.scrollLeft={get:function(o,e){var t=null;return("HTML"===o.tagName||"BODY"===o.tagName)&&("scrollLeft"===e?t=window.scrollX:"scrollTop"===e&&(t=window.scrollY)),null==t&&(t=o[e]),t}},e.Tween.propHooks.scrollTop=e.Tween.propHooks.scrollLeft={get:function(o){return e.propHooks.scrollTop.get(o.elem,o.prop)},set:function(o){"HTML"===o.elem.tagName||"BODY"===o.elem.tagName?(o.options.bodyScrollLeft=o.options.bodyScrollLeft||window.scrollX,o.options.bodyScrollTop=o.options.bodyScrollTop||window.scrollY,"scrollLeft"===o.prop?o.options.bodyScrollLeft=Math.round(o.now):"scrollTop"===o.prop&&(o.options.bodyScrollTop=Math.round(o.now)),window.scrollTo(o.options.bodyScrollLeft,o.options.bodyScrollTop)):o.elem.nodeType&&o.elem.parentNode&&(o.elem[o.prop]=o.now)}},t={config:{duration:400,easing:"swing",callback:void 0,durationMode:"each",offsetTop:0,offsetLeft:0},configure:function(o){return e.extend(t.config,o||{}),this},scroll:function(o,l){var r,n,s,i,p,c,f,a,d,u,g,h,T,w,m,y,L,b;return r=o.pop(),n=r.$container,s=r.$target,c=n.prop("tagName"),i=e("<span/>").css({position:"absolute",top:"0px",left:"0px"}),p=n.css("position"),n.css({position:"relative"}),i.appendTo(n),g=i.offset().top,h=s.offset().top,T=h-g-parseInt(l.offsetTop,10),w=i.offset().left,m=s.offset().left,y=m-w-parseInt(l.offsetLeft,10),f=n.prop("scrollTop"),a=n.prop("scrollLeft"),i.remove(),n.css({position:p}),L={},b=function(){return 0===o.length?"function"==typeof l.callback&&l.callback():t.scroll(o,l),!0},l.onlyIfOutside&&(d=f+n.height(),u=a+n.width(),T>f&&d>T&&(T=f),y>a&&u>y&&(y=a)),T!==f&&(L.scrollTop=T),y!==a&&(L.scrollLeft=y),n.prop("scrollHeight")===n.width()&&delete L.scrollTop,n.prop("scrollWidth")===n.width()&&delete L.scrollLeft,null!=L.scrollTop||null!=L.scrollLeft?n.animate(L,{duration:l.duration,easing:l.easing,complete:b}):b(),!0},fn:function(o){var l,r,n,s;l=[];var i=e(this);if(0===i.length)return this;for(r=e.extend({},t.config,o),n=i.parent(),s=n.get(0);1===n.length&&s!==document.body&&s!==document;){var p,c;p="visible"!==n.css("overflow-y")&&s.scrollHeight!==s.clientHeight,c="visible"!==n.css("overflow-x")&&s.scrollWidth!==s.clientWidth,(p||c)&&(l.push({$container:n,$target:i}),i=n),n=n.parent(),s=n.get(0)}return l.push({$container:e("html"),$target:i}),"all"===r.durationMode&&(r.duration/=l.length),t.scroll(l,r),this}},e.ScrollTo=e.ScrollTo||t,e.fn.ScrollTo=e.fn.ScrollTo||t.fn,t});
+
+
+            jQuery(document).ready(function($) {
+
+                // When submitting form, don't reload page
+                $('form').submit(function () {
+                    return false;
+                });
+
+                // All below JS is run when the 'Calculate' button is clicked
+                $('.cta-calculate').click(function() {
+
+                    // Get values from input fields and multiply by the unit prices
+                    var wine = $('.wine input').val() * 3;
+                    var cigarettes = $('.cigarettes input').val() * 7.98;
+                    var beers = $('.beers input').val() * 3.2;
+                    var chocolate = $('.chocolate input').val() * .51;
+                    var coffee = $('.coffee input').val() * 2.2;
+                    var takeaways = $('.takeaways input').val() * 9.16;
+                    var spirits = $('.spirits input').val() * 2.5;
+                    var sandwiches = $('.sandwiches input').val() * 1.66;
+                    var bus = $('.bus-trips input').val() * 1.91;
+
+                    // Calculate weekly, monthly, yearly and ten-yearly savings
+                    var weekly = wine+cigarettes+beers+chocolate+coffee+takeaways+spirits+sandwiches+bus;
+                    var monthly = ((weekly)*52)/12;
+                    var yearly = (weekly)*52;
+                    var tenyr = (yearly)*10;
+
+                    // Format numbers to have comma separators for thousands
+                    function numberWithCommas(x) {
+                        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    }
+
+                    // Format numbers to have 0 decimal points
+                    var weeklyF = weekly.toFixed(0);
+                    var monthlyF = monthly.toFixed(0);
+                    var yearlyF = yearly.toFixed(0);
+                    var tenyrF = tenyr.toFixed(0);
+
+                    // Add savings totals to appropriate elements
+                    $('.weekly .num').text(numberWithCommas(weeklyF));
+                    $('.monthly .num').text(numberWithCommas(monthlyF));
+                    $('.yearly .num').text(numberWithCommas(yearlyF));
+                    $('.ten-yr .num').text(numberWithCommas(tenyrF));
+
+                    // Show the results section
+                    $('.results').show();
+
+                    // Slide the page down to the results section
+                    $('.results').ScrollTo({
+                        duration: 1200
+                    });
+
+                });
+
+                $('.how-toggle').click(function() {
+                    $('.how').slideToggle();
+                    $('.how').ScrollTo({
+                        duration: 1200
+                    });
+                });
+
+            });
+
+        </script>
+
+
+    </body>
+</html>
